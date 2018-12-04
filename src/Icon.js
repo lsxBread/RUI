@@ -4,7 +4,7 @@ import './scss/Icon.scss'
 
 const Icon = (props) => {
   return (
-    <svg className="g-icon" aria-hidden="true">
+    <svg className={`g-icon ${props.className}`} aria-hidden="true">
       <use xlinkHref={`#i-${props.name}`} />
     </svg>
   )

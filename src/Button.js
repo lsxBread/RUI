@@ -7,9 +7,10 @@ const Button = (props) => {
   const { icon, iconPosition } = props
   return (
     <button className={`g-button icon-${iconPosition}`}>
+      <Icon className='loading' name='loading' />
       {
         props.icon &&
-        <Icon name={icon} />
+        <Icon className="icon" name={icon} />
       }
       <div className='content'>
         {props.children}
