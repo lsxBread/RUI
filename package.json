@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "npx parcel index.html --no-cache",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "React",
@@ -16,16 +16,28 @@
   "devDependencies": {
     "babel-cli": "6",
     "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-app": "3",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "jest": "^23.6.0",
+    "jest-transform-stub": "^1.0.0",
     "node-sass": "^4.10.0",
-    "parcel-bundler": "^1.10.3"
+    "parcel-bundler": "^1.10.3",
+    "react-test-renderer": "^16.6.3"
   },
   "dependencies": {
     "pro": "^0.3.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+    }
   }
 }
