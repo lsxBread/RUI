@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from './Button'
+import Icon from './Icon'
 
 class App extends React.Component {
   render () {
@@ -8,6 +9,7 @@ class App extends React.Component {
         <Button>Hello World</Button>
         <Button icon='settings'>Hello</Button>
         <Button icon='settings' iconPosition='right'>Hello</Button>
+        <Icon name='right' />
       </React.Fragment>
     )
   }

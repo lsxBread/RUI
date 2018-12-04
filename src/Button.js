@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Icon from './Icon'
 import './scss/Button.scss'
 
 const Button = (props) => {
@@ -8,9 +9,7 @@ const Button = (props) => {
     <button className={`g-button icon-${iconPosition}`}>
       {
         props.icon &&
-        <svg className="icon" aria-hidden="true">
-          <use xlinkHref={`#i-${icon}`} />
-        </svg>
+        <Icon name={icon} />
       }
       <div className='content'>
         {props.children}
